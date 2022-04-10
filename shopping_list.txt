@@ -1,5 +1,5 @@
 Pizza x 2
-Eggs x 3
+Eggs x 15
 Milk x 10
 Honey x 2
 Bacon x 20
