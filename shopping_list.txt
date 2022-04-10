@@ -1,5 +1,11 @@
 Pizza x 2
 Eggs x 15
 Milk x 10
+<<<<<<< HEAD
 Honey x 2
 Bacon x 4
+=======
+Orange x 2
+Bacon x 20
+Steak x 5
+>>>>>>> branch2
