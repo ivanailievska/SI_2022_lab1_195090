@@ -1,0 +1,329 @@
+ivana@DESKTOP-QO4NB7O MINGW64 ~ (master)
+$ cd /e/finki/softversko
+
+-----(Vleguvanje vo folder)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko
+$ git clone https://github.com/ivanailievska/SI_2022_lab1_195090.git
+Cloning into 'SI_2022_lab1_195090'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+-----(Kloniranje na repo)------
+
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko
+$ cd /e/finki/softversko/SI_2022_lab1_195090
+
+-----(Vleguvanje vo clone-ot)------
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        shopping_list.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+-----(Gledanje na untracked files)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git add shopping_list.txt
+
+-----(Dodavanje na untracked files)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git commit -m "Add 5 items to the shopping list"
+[master 053010a] Add 5 items to the shopping list
+ 1 file changed, 5 insertions(+)
+ create mode 100644 shopping_list.txt
+
+-----(Commit na shopping_list.txt so poraka "Add 5 items to the shopping list" -m oznacuva message)-----
+
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git add shopping_list.txt
+
+-----(Dodavanje na untracked files)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git commit -m "Add quantities to the items."
+[master baa9e77] Add quantities to the items.
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+-----(Commit na shopping_list.txt so poraka "Add quantities to the items.")-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+-----(git status - proverka na sostojba, nemame nisto za commitnuvanje)------
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git branch branch1
+
+-----(kreiranje na nova granka so ime branch1)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git branch branch2
+
+-----(kreiranje na nova granka so ime branch2)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git log
+commit baa9e778e87cebe4fa860d2c618895ddbb6b2376 (HEAD -> master, branch2, branch1)
+Author: Ivana Ilievska <ilievska_ivana@hotmail.com>
+Date:   Sun Apr 10 18:04:40 2022 +0200
+
+    Add quantities to the items.
+
+commit 053010acca21bd562326585dd7766c417ece614e
+Author: Ivana Ilievska <ilievska_ivana@hotmail.com>
+Date:   Sun Apr 10 18:00:04 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 747fbeeaa9b5e54472cba92b41647dd608abe463 (origin/master, origin/HEAD)
+Author: Ivana Ilievska <86912362+ivanailievska@users.noreply.github.com>
+Date:   Sun Apr 10 17:35:01 2022 +0200
+
+    Update README.md
+
+commit c17f53f11c4fb50d5ccdd20fd6ad22965d7eca99
+Author: Ivana Ilievska <86912362+ivanailievska@users.noreply.github.com>
+Date:   Sun Apr 10 17:29:57 2022 +0200
+
+    Initial commit
+
+
+-----(so git log se prikazuva istorijata na commitite)-----
+
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git push --all -u
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 645 bytes | 645.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ivanailievska/SI_2022_lab1_195090.git
+   747fbee..baa9e77  master -> master
+ * [new branch]      branch1 -> branch1
+ * [new branch]      branch2 -> branch2
+branch 'master' set up to track 'origin/master'.
+branch 'branch1' set up to track 'origin/branch1'.
+branch 'branch2' set up to track 'origin/branch2'.
+
+-----(se pushuvaat grankite vo repoto)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git checkout branch1
+Switched to branch 'branch1'
+Your branch is up to date with 'origin/branch1'.
+
+-----(menuvanje od grankata master na grankata branch1)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (branch1)
+$ git add shopping_list.txt
+
+-----(Dodavanje na untracked files)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (branch1)
+$ git commit -m "Change quantity of item #5"
+[branch1 ac558e3] Change quantity of item #5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+-----(Commit na shopping_list.txt so poraka "Change quantity of item #5")-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+-----(menuvanje od grankata branch1 na grankata master)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git add shopping_list.txt
+
+-----(Dodavanje na untracked files)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git commit -m "Change quantity of item #2"
+[master 66d37da] Change quantity of item #2
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+-----(Commit na shopping_list.txt so poraka "Change quantity of item #2")-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git push --all -u
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 599 bytes | 599.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/ivanailievska/SI_2022_lab1_195090.git
+   baa9e77..ac558e3  branch1 -> branch1
+   baa9e77..66d37da  master -> master
+branch 'branch1' set up to track 'origin/branch1'.
+branch 'branch2' set up to track 'origin/branch2'.
+branch 'master' set up to track 'origin/master'.
+
+-----(se pushuvaat grankite vo repoto)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git checkout branch2
+Switched to branch 'branch2'
+Your branch is up to date with 'origin/branch2'.
+
+
+-----(menuvanje od grankata master na grankata branch2)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (branch2)
+$ git add shopping_list.txt
+
+
+-----(Dodavanje na untracked files)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (branch2)
+$ git commit -m "Modify item #4"
+[branch2 5f5de6d] Modify item #4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+-----(Commit na shopping_list.txt so poraka "Modify item #4")-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (branch2)
+$ git log
+commit 5f5de6d4c2502798117defc13d59666ea071ed89 (HEAD -> branch2)
+Author: Ivana Ilievska <ilievska_ivana@hotmail.com>
+Date:   Sun Apr 10 18:56:42 2022 +0200
+
+    Modify item #4
+
+commit baa9e778e87cebe4fa860d2c618895ddbb6b2376 (origin/branch2)
+Author: Ivana Ilievska <ilievska_ivana@hotmail.com>
+Date:   Sun Apr 10 18:04:40 2022 +0200
+
+    Add quantities to the items.
+
+commit 053010acca21bd562326585dd7766c417ece614e
+Author: Ivana Ilievska <ilievska_ivana@hotmail.com>
+Date:   Sun Apr 10 18:00:04 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 747fbeeaa9b5e54472cba92b41647dd608abe463
+Author: Ivana Ilievska <86912362+ivanailievska@users.noreply.github.com>
+Date:   Sun Apr 10 17:35:01 2022 +0200
+
+    Update README.md
+
+commit c17f53f11c4fb50d5ccdd20fd6ad22965d7eca99
+Author: Ivana Ilievska <86912362+ivanailievska@users.noreply.github.com>
+Date:   Sun Apr 10 17:29:57 2022 +0200
+
+    Initial commit
+
+
+
+-----(so git log se prikazuva istorijata na commitite)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (branch2)
+$ git reset --soft HEAD^
+
+-----(se otstranuva posledniot commit i se vranjame za eden commit)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (branch2)
+$ git add shopping_list.txt
+
+-----(Dodavanje na untracked files)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (branch2)
+$ git commit -m "Modify item #4 and add item #6"
+[branch2 946b15e] Modify item #4 and add item #6
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+-----(Commit na shopping_list.txt so poraka "Modify item #4 and add item #6")-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (branch2)
+$ git log
+commit 946b15e18aab2b06848268d012d1e4f0b2fe370c (HEAD -> branch2)
+Author: Ivana Ilievska <ilievska_ivana@hotmail.com>
+Date:   Sun Apr 10 19:05:11 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit baa9e778e87cebe4fa860d2c618895ddbb6b2376 (origin/branch2)
+Author: Ivana Ilievska <ilievska_ivana@hotmail.com>
+Date:   Sun Apr 10 18:04:40 2022 +0200
+
+    Add quantities to the items.
+
+commit 053010acca21bd562326585dd7766c417ece614e
+Author: Ivana Ilievska <ilievska_ivana@hotmail.com>
+Date:   Sun Apr 10 18:00:04 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 747fbeeaa9b5e54472cba92b41647dd608abe463
+Author: Ivana Ilievska <86912362+ivanailievska@users.noreply.github.com>
+Date:   Sun Apr 10 17:35:01 2022 +0200
+
+    Update README.md
+
+commit c17f53f11c4fb50d5ccdd20fd6ad22965d7eca99
+Author: Ivana Ilievska <86912362+ivanailievska@users.noreply.github.com>
+Date:   Sun Apr 10 17:29:57 2022 +0200
+
+    Initial commit
+
+
+-----(so git log se prikazuva istorijata na commitite)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (branch2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+
+-----(menuvanje od grankata branch2 na grankata master)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git merge branch1
+Auto-merging shopping_list.txt
+Merge made by the 'ort' strategy.
+ shopping_list.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+-----(spojuvanje na grankite)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master)
+$ git merge branch2
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+-----(Se pojavuva kofnlikt sto treba da se razresi)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master|MERGING)
+$ git add shopping_list.txt
+
+-----(dodavanje na grankata za da se razresi konfliktot)-----
+
+ivana@DESKTOP-QO4NB7O MINGW64 /e/finki/softversko/SI_2022_lab1_195090 (master|MERGING)
+$ git commit -m "fixing conflict"
+[master cc2c850] fixing conflict
+
+-----(commit so poraka "ficing conflict")-----
