@@ -1,5 +1,5 @@
-Pizza
-Eggs
-Milk
-Honey
-Bacon
+Pizza x 2
+Eggs x 3
+Milk x 10
+Honey x 2
+Bacon x 20
